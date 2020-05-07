@@ -1,0 +1,12 @@
+diff --git a/node_modules/snoostorm/out/classes/Poll.js b/node_modules/snoostorm/out/classes/Poll.js
+index 0bd1080..c25e28d 100644
+--- a/node_modules/snoostorm/out/classes/Poll.js
++++ b/node_modules/snoostorm/out/classes/Poll.js
+@@ -74,6 +74,7 @@ var Poll = /** @class */ (function (_super) {
+                             }])];
+                     case 2:
+                         got = _c.sent();
++                        that.emit("listing", got);
+                         got.forEach(function (item) { return that.emit("item", item); });
+                         (_b = that.inventory).push.apply(_b, got);
+                         return [2 /*return*/];
