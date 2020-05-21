@@ -34,7 +34,8 @@ submissions.on('listing', (r) => {
 })
 
 async function sendPostToMatterMost (post) {
-  const { title, author, url } = post
+  const { title, author, permalink } = post
+  const url = `https://www.reddit.com${permalink}`
   const body = ` * [${title} - ${author.name}](${url})`
   console.log(`Sending: ${body}`)
   axios.post(process.env.MATTERMOST_URL, {
